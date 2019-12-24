@@ -2,7 +2,7 @@ from datetime import datetime
 import pip
 
 try:
-	import pyfiglet
+	import pyfiglet        
 except ImportError:
 	print('Need To install the package')
 	pip.main(['install','pyfiglet'])
