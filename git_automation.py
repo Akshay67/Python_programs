@@ -12,15 +12,16 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-#To listout the only directory name
-os.system("ls -d */")
+def dirManagement():
+    #To listout the only directory name
+    os.system("ls -d */")
+    userInputDirectoryName = input(bcolors.BOLD + bcolors.WARNING + "Enter the directory name to enter into it:->  " + bcolors.ENDC)
+    #subprocess.call('cd ' + userInputDirectoryName, shell=True)
+    #Popen(["cd",(userInputDirectoryName)],stdout=PIPE)
+    os.chdir(userInputDirectoryName)
+    print(os.getcwd())
+    os.system('git branch')
+    #os.system("ls")
+    #working_dir = os.getcwd()
 
-userInputDirectoryName = input(bcolors.BOLD + bcolors.WARNING + "Enter the directory name to enter into it:->  " + bcolors.ENDC)
-
-#subprocess.call('cd ' + userInputDirectoryName, shell=True)
-#Popen(["cd",(userInputDirectoryName)],stdout=PIPE)
-os.chdir(userInputDirectoryName)
-print(os.getcwd())
-os.system('git branch')
-#os.system("ls")
-#working_dir = os.getcwd()
+dirManagement()
